@@ -17,7 +17,7 @@ uint32_t S[T];
 
 void RC5_key_schedule(uint8_t *K) {
     uint32_t L[C];
-    memset(L, 0, sizeof(L)); // Initialize L to zero
+    memset(L, 0, sizeof(L)); 
     for (int i = KEY_LENGTH_BYTES - 1; i >= 0; i--) {
         L[i / 4] = (L[i / 4] << 8) + K[i];
     }
